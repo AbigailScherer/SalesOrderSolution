@@ -1,0 +1,83 @@
+﻿@model SalesOrdersProject.Models.ShoppingCartViewModel
+
+@{
+    ViewBag.Title = "SalesOrders Shopping Cart";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.js"></script>
+<h2>Shopping Cart</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Quantity</th>
+            <th>Item</th>
+            <th>Price</th>
+        <tr>
+            <td> Selling price </td>
+            <td> <input type="text" id="inputuser"> </td>
+        </tr>
+
+        <tr>
+            <td> GST ($100 × 5%)  </td>
+            <td>
+                <input type="button" value="calculate GST" onclick="showGST();" />
+                <div id="valueGST" class="GST"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td> QST ($100 × 9.975%)  </td>
+            <td>
+                <input type="button" value="calculate QST" onclick="showQST();" />
+                <div id="valueQST" class="QST"></div>
+            </td>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.Cart.Items)
+        {
+            <tr>
+                <td>@item.Quantity</td>
+                <td>@item.Product.ProductName</td>
+                <td>@item.Product.ProductPrice</td>
+                <td>@(item.Quantity * item.Product.ProductPrice)</td>
+
+                <!-- Button below will not be operational -->
+                <td>
+                    @using (Html.BeginForm("RemoveFromCart", "ShoppingCart"))
+                    {
+                        @Html.Hidden("ProductId", item.Product.ProductID)
+                        @Html.HiddenFor(x => x.ReturnUrl)
+                        <input class="btn btn-sm btn-warning"
+                               type="submit" value="Remove" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">Total:</td>
+            <td>
+                <input type="button" value="calculate total" onclick="showTotal();" />
+                <div id="valueTotal" class="total"></div>
+            </td>
+            <td>@Model.Cart.GetCartTotal().ToString("c")</td>
+        </tr>
+    </tfoot>
+</table>
+
+<div>
+    <a class="btn btn-primary" href="@Model.ReturnUrl">
+        Continue Shopping
+    </a>
+
+    <!-- Button below will not be operational -->
+    @Html.ActionLink("Checkout", "ShippingInfo", null,
+                     new { @class = "btn btn-primary" })
+</div>
+

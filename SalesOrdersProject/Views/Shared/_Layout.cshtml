@@ -1,0 +1,45 @@
+﻿<head>
+    <meta name="viewport" content="width=" device-width" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    
+    <div id="header">
+        <div style="margin-left: -80em; font-size: 20px; font-weight: bold;"> <h1>The Bike Shop</h1></div>
+       
+    </div>
+
+    <div id="main">
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    Bike Shop
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Shop", "Index", "Shop")</li>
+                    <li>@Html.ActionLink("Cart", "Index", "Cart")</li>
+                    <li>@Html.ActionLink("Login", "Index", "Login")</li>
+                    <li>@Html.ActionLink("Register", "Index", "Register")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                </div>
+            </div>
+
+                <div style="width: 80%; float: left;">
+                    @RenderBody()
+                </div>
+            </div>
+</body>

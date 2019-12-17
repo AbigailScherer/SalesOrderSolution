@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<img src="~/Content/images/photo3.jpeg" style="height: 350px; width: 850px; margin-left: 5em;" />
+<form class="cf">
+    <div class="half left cf">
+        <input type="text" id="input-name" placeholder="Name">
+        <input type="email" id="input-email" placeholder="Email address">
+        <input type="text" id="input-subject" placeholder="Subject">
+    </div>
+    <div class="half right cf">
+        <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
+    </div>
+    <input type="submit" value="Submit" id="input-submit">
+</form>
+<body>
+    <address>
+        One Microsoft Way<br />
+        Redmond, WA 98052-6399<br />
+        <abbr title="Phone">P:</abbr>
+        425.555.0100
+    </address>
+
+    <address>
+        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+    </address>
+</body>

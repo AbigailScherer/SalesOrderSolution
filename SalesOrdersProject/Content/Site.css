@@ -1,0 +1,531 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #E9E7DA;
+    color: #373F27;
+}
+
+h1 {
+   margin-left: 20em; 
+}
+
+.pager{
+   word-spacing: 8px;
+}
+
+/*about*/
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,500|Roboto:400,700');
+
+$white: #fff;
+$gray: #a5a5a5;
+$black: #322c2c;
+$text: #8e8e8e;
+
+* {
+    box-sizing: border-box;
+    &::before, &::after
+
+{
+    box-sizing: border-box;
+}
+
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: $text;
+    background: $white;
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3 {
+    font-family: 'EB Garamond', serif;
+    color: $black;
+    line-height: 1.1;
+}
+
+h2, h3 {
+    color: $black;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.325rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0 0 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+    margin: 0 0 2rem;
+}
+
+p {
+    margin: 0 0 1.5rem;
+    &:nth-child(4)
+
+{
+    margin: 0;
+}
+
+&.copyright {
+    margin: 1.5rem 0;
+}
+
+}
+
+a {
+    color: $gray;
+    text-decoration: none;
+    &:hover
+
+{
+    color: $black;
+}
+
+}
+
+blockquote {
+    font-style: italic;
+    text-align: center;
+    width: 40rem;
+    height: auto;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.intro {
+    margin: 1rem 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #E9E7DA;
+    position: relative;
+}
+
+    .nav > .nav-header {
+        display: inline;
+    }
+
+        .nav > .nav-header > .nav-title {
+            display: inline-block;
+            font-size: 22px;
+            color: #fff;
+            padding: 10px 10px 10px 10px;
+        }
+
+    .nav > .nav-btn {
+        display: none;
+    }
+
+    .nav > .nav-links {
+        display: inline;
+       float: right;
+        font-size: 18px;
+    }
+
+        .nav > .nav-links > ul > li {
+            display: inline;
+            padding: 10px 10px 10px 10px;
+            text-decoration: none;
+            color: white;
+
+        }
+
+            .nav > .nav-links > ul > li:hover {
+                background-color: white;
+            }
+
+    .nav > #nav-check {
+        display: none;
+    }
+
+@media (max-width:600px) {
+    .nav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+        .nav > .nav-btn > label {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            padding: 13px;
+        }
+
+            .nav > .nav-btn > label:hover, .nav #nav-check:checked ~ .nav-btn > label {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .nav > .nav-btn > label > span {
+                display: block;
+                width: 25px;
+                height: 10px;
+                border-top: 2px solid #eee;
+            }
+
+    .nav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+        .nav > .nav-links > li {
+            display: block;
+            width: 100%;
+        }
+
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+
+    .nav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+#logo {
+    color: $black;
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.container {
+    margin: auto;
+    padding: 0 1rem;
+    max-width: 75rem;
+    width: 100%;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+.grid {
+    > [class*="column-"]
+
+{
+    padding: 1rem;
+}
+
+}
+
+.section-heading {
+    transform: rotate(0) translateX(0);
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+}
+
+@media (min-width: $md) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    nav {
+        padding: 2.5rem 0 2.5rem 0;
+        ul
+
+{
+    justify-content: flex-end;
+}
+
+}
+
+h1 {
+    font-size: 3.25rem;
+}
+
+h2 {
+    font-size: 2.75rem;
+}
+
+h3 {
+    font-size: 2.25rem;
+}
+
+.img {
+    height: 40rem;
+}
+
+.section-heading {
+    position: absolute;
+    transform-origin: top left;
+    transform: rotate(-90deg) translateX(-100%);
+}
+
+.intro {
+    padding: 1rem;
+}
+
+blockquote {
+    width: 30rem;
+    height: 40rem;
+}
+
+}
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Login page*/
+.body {
+    background-color: #E9E7DA;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.main {
+    color: black;
+    width: 400px;
+    height: 400px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+
+.sign {
+    padding-top: 40px;
+    color: #636B46;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.un {
+    width: 95%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+    padding-top: 40px;
+}
+
+.pass {
+    width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+    .un:focus, .pass:focus {
+        border: 2px solid rgba(0, 0, 0, 0.18) !important;
+    }
+
+.submit {
+    cursor: pointer;
+    border-radius: 5em;
+    color: #E9E7DA;
+    background: #CDA34F;
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 55%;
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #636B46;
+    text-decoration: none
+}
+
+.topnav {
+    overflow: hidden;
+}
+
+.topnav li {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+}
+
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
+
+
+html, body {
+    background: #f1f1f1;
+    font-family: 'Merriweather', sans-serif;
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+    color: #a8a8a8;
+    text-shadow: 1px 1px 0;
+}
+
+form {
+    max-width: 600px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+textarea {
+    border: 0;
+    outline: 0;
+    padding: 1em;
+    border-radius: 8px;
+    display: block;
+    width: 100%;
+    margin-top: 1em;
+    font-family: 'Merriweather', sans-serif;
+    box-shadow: 0 1px 1px;
+    resize: none;
+}
+    
+    &:focus
+{
+    box-shadow: 0 0px 2px;
+}
+
+}
+
+#input-submit {
+    color: white;
+    background: $red;
+    cursor: pointer;
+}
+  &:hover {
+    box-shadow: 0 1px 1px 1px;
+}
+
+}
+
+textarea {
+    height: 126px;
+}
+
+
+
+.half {
+    float: left;
+    width: 48%;
+    margin-bottom: 1em;
+}
+
+.right {
+    width: 50%;
+}
+
+.left {
+    margin-right: 2%;
+}
+
+
+@media (max-width: 480px) {
+    .half {
+        width: 100%;
+        float: none;
+        margin-bottom: 0;
+    }
+}
+
+
+/* Clearfix */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
